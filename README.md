@@ -42,9 +42,7 @@ Maven
       Инструкция по составлению cron выражения.rtf
     - FILE_LOGS=<system-folder> - путь до системной папки логов
     - BOOTSTRAP_SERVERS= IP-address BOOTSTRAP SERVERS Kafka
-    - 
-Дополнительные параметры:
-sendSizeMessage - размер передаваемых файлов, default не более 10MB
-pattern:rolling-file-name - <system-folder> - путь до системной папки логов/формат даты логов - по default стоит logs-%d{yyyy-MM-dd}.%i.log
-topics:topics-mapping - данный параметр заполняется значениями в формате fileName:topicName, где fileName - название(ключевая часть названия) файла, по которому будет производиться поиск топика, topicName - название топика в Kafka
-basket:path - прописывается путь до директории в которой будет создана папка basket - папка создается приложением, название заказчиком самостоятельно не меняется
+    - sendSizeMessage - размер передаваемых файлов, default не более 10MB
+    - pattern:rolling-file-name - <system-folder> - путь до системной папки логов/формат даты логов - по default стоит logs-%d{yyyy-MM-dd}.%i.log
+    - topics:topics-mapping - данный параметр заполняется значениями в формате fileName:topicName, где fileName - название(ключевая часть названия) файла, по которому будет производиться поиск топика, topicName - название топика в Kafka
+    - basket:path - прописывается путь до директории в которой будет создана папка basket - папка создается приложением, название заказчиком самостоятельно не меняется

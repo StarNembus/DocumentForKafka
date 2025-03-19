@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: DocumentForKafka
+  kafka:
+    bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+    sendSizeMessage: "10485880"
+
+folder:
+  path: 
+
+logging:
+  file:
+    name: ${FILE_LOGS}
+  pattern:
+    rolling-file-name: /Users/lvpolozo/Logs/logs-%d{yyyy-MM-dd}.%i.log
+
+cron_job: ${CRON_JOB}
+
+topic:
+  name: ${TOPIC_NAME}
+
+topics:
+  topics-mapping:
+    BILL: BILL
+    INVENTORY: INVENTORY
+    OrderStatus: ORDER-STATUS
+
+basket:
+  path: /Users/lvpolozo/

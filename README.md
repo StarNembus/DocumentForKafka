@@ -32,3 +32,19 @@ Maven
 Количество topics - в зависимости от запроса заказчика
 
 Количество partitions in one topic - default  → 1
+
+Описание файла конфигурации: какие параметры и для чего служат
+
+- environment-variables:
+    - PATH= <system-folder-document> - путь до системной папки, где находятся документы для передачи
+    - TOPIC_NAME= Name Kafka Topic
+    - CRON_JOB= CRON выражение расписания - устанавливается заказчиком - это расписание обращения приложения к сетевой папке (Attention! не путать с расписанием запуска приложения)
+      Инструкция по составлению cron выражения.rtf
+    - FILE_LOGS=<system-folder> - путь до системной папки логов
+    - BOOTSTRAP_SERVERS= IP-address BOOTSTRAP SERVERS Kafka
+    - 
+Дополнительные параметры:
+sendSizeMessage - размер передаваемых файлов, default не более 10MB
+pattern:rolling-file-name - <system-folder> - путь до системной папки логов/формат даты логов - по default стоит logs-%d{yyyy-MM-dd}.%i.log
+topics:topics-mapping - данный параметр заполняется значениями в формате fileName:topicName, где fileName - название(ключевая часть названия) файла, по которому будет производиться поиск топика, topicName - название топика в Kafka
+basket:path - прописывается путь до директории в которой будет создана папка basket - папка создается приложением, название заказчиком самостоятельно не меняется

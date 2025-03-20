@@ -2,17 +2,17 @@ spring:
   application:
     name: DocumentForKafka
   kafka:
-    bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+    bootstrap-servers: ${BOOTSTRAP_SERVERS}
     sendSizeMessage: "10485880"
 
 folder:
-  path: 
+  path: ${PATH}
 
 logging:
   file:
     name: ${FILE_LOGS}
   pattern:
-    rolling-file-name: /Users/lvpolozo/Logs/logs-%d{yyyy-MM-dd}.%i.log
+    rolling-file-name: ${ROLLING_FILE_NAME}
 
 cron_job: ${CRON_JOB}
 
@@ -26,4 +26,4 @@ topics:
     OrderStatus: ORDER-STATUS
 
 basket:
-  path: /Users/lvpolozo/
+  path: ${BASKET_PATH}
